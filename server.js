@@ -1,4 +1,3 @@
-//docker exec -it cosc203mysql mysql -u root -p --default-character-set=utf8mb4
 
 const express = require('express');
 const multer = require('multer');
