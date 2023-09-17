@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar', { status: status}) %>
+    <main id="birds">
+        <div class="four04">
+            <h1>404 Page Not Found</h1>
+            <p>Did you fly in the wrong direction?</p>
+        </div>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

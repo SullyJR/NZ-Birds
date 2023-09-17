@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><%= bird.primary_name %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar', { status: status}) %>
+    <main id="birds">
+        <%- include('partials/bird', { bird: bird}) %>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>

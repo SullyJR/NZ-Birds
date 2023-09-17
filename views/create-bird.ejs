@@ -1,0 +1,74 @@
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <%- include('partials/sidebar', { status: status}) %>
+    <main id="birds">
+        <form action="/birds/create" method="POST" enctype="multipart/form-data">
+            <fieldset>
+                <legend>Common Names</legend>
+
+                <label for="primary_name">Primary Name</label>
+                <input type="text" name="primary_name" required>
+
+                <label for="english_name">English Name</label>
+                <input type="text" name="english_name" required>
+
+            </fieldset>
+            <fieldset>
+                <legend>Taxonomy</legend>
+
+                <label for="scientific_name">Scientific Name</label>
+                <input type="text" name="scientific_name" required>
+
+                <label for="family">Family</label>
+                <input type="text" name="family" required>
+
+                <label for="order">Order</label>
+                <input type="text" name="order_name" required>
+
+            </fieldset>
+            <fieldset>
+                <legend>Size</legend>
+
+                <label for="length">Length (cm)</label>
+                <input type="number" name="length" required>
+
+                <label for="weight">Weight (g)</label>
+                <input type="number" name="weight" required>
+
+            </fieldset>
+            <fieldset>
+                <legend>Conservation Status</legend>
+
+                <label for="status">Status</label>
+                <select name="status" id="status">
+                    <% for (let i = 0; i < status.length; i++) { %>
+                        <option value="<%= status[i].status_id %>"><%= status[i].status_name %></option>
+                    <% } %>
+                </select>
+
+            </fieldset>
+            <fieldset>
+                <legend>Photo</legend>
+
+                <label for="photograph">Photo Credit</label>
+                <input type="text" name="photograph" required>
+
+                <label for="photo_file">Photo Upload</label>
+                <input type="file" name="photo_file" id="photo_file">
+
+                <label for="photo_source">Photo Source</label>
+                <img src="" alt="Bird Photo" id="photo_prev">
+                <input type="text" name="photo_source" id="photo_source" readonly="readonly"> 
+
+            </fieldset>
+            <button class="button" type="submit">Save Bird</button>
+        </form>
+    </main>
+    <%- include('partials/footer') %>
+</body>
+</html>
