@@ -21,7 +21,7 @@ Birds of Aotearoa is a web application for managing a database of native birds. 
 ### Installation
 1. Clone the repository:
    ```sh
-   git clone [https://altitude.otago.ac.nz/cosc203/code/asgn2-starter](https://github.com/SullyJR/NZ-Birds.git)
+   git clone https://github.com/SullyJR/NZ-Birds.git
    cd NZ-Birds
    ```
 2. Install dependencies:
