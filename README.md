@@ -1,5 +1,7 @@
 # Birds of Aotearoa
 
+![Project Image](https://github.com/SullyJR/NZ-Birds/blob/main/public/images/project-img.jpeg "Project's Landing Page")
+
 ## Overview
 Birds of Aotearoa is a web application for managing a database of native birds. It allows users to create, edit, delete, and view bird entries, as well as upload images. The backend is built with Node.js and Express, using MySQL for data storage and EJS for server-side rendering.
 
